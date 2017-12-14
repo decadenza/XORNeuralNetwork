@@ -7,7 +7,7 @@ import numpy as np
 
 N_OF_NEURONS = 3 # How much intelligent is the network
 
-# activation function choosen: sigmoid function (also in derivative apporximation)
+# activation function choosen: sigmoid function (also with derivative option)
 def nonlin(x,deriv=False):
 	if(deriv==True):
 	    return x*(1-x)
