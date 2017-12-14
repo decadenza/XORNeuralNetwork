@@ -5,6 +5,8 @@ and adapted for the XOR function
 '''
 import numpy as np
 
+N_OF_NEURONS = 3 # How much intelligent is the network
+
 # activation function
 def nonlin(x,deriv=False):
 	if(deriv==True):
@@ -26,8 +28,8 @@ Y = np.array([[0],   # XOR function output
 
 # randomly initialize our weights
 np.random.seed(1)
-syn0 = np.random.random((2,3)) # represents links between 3 neurons (cols) and 2 input (row)
-syn1 = np.random.random((3,1)) # represents links between 3 neurons and the output
+syn0 = np.random.random((2,N_OF_NEURONS)) # represents links between 3 neurons (cols) and 2 input (row)
+syn1 = np.random.random((N_OF_NEURONS,1)) # represents links between 3 neurons and the output
 
 for i in range(100000): # You can increase iterations for better results
     # forward propagation
